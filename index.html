@@ -26,6 +26,18 @@
             Fews in stock
           </p>
           <p v-else style="color: red">Out of stock</p>
+          <ul>
+            <li v-for="size in sizes">{{size}}</li>
+          </ul>
+          <ul>
+            <li v-for="variant in variants" :key="variant.variantId">
+              {{variant.variantColor}}
+            </li>
+          </ul>
+          <ul>
+            <li v-for="detail in details">{{detail}}</li>
+          </ul>
+
           <p>{{ description }}</p>
           <a :href="link" target="blank">View more socks</a>
         </div>
